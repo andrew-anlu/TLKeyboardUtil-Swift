@@ -1,0 +1,15 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'TLKeyboardUtil-Swift_Example', :exclusive => true do
+  pod 'TLKeyboardUtil-Swift', :path => '../'
+end
+
+target 'TLKeyboardUtil-Swift_Tests', :exclusive => true do
+  pod 'TLKeyboardUtil-Swift', :path => '../'
+
+  pod 'Quick', '~> 0.8.0'
+  pod 'Nimble', '3.0.0'
+  pod 'FBSnapshotTestCase'
+  pod 'Nimble-Snapshots'
+end
