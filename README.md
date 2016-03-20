@@ -1,4 +1,5 @@
 # TLKeyboardUtil-Swift
+<<<<<<< HEAD
 
 [![CI Status](http://img.shields.io/travis/Andrew/TLKeyboardUtil-Swift.svg?style=flat)](https://travis-ci.org/Andrew/TLKeyboardUtil-Swift)
 [![Version](https://img.shields.io/cocoapods/v/TLKeyboardUtil-Swift.svg?style=flat)](http://cocoapods.org/pods/TLKeyboardUtil-Swift)
@@ -27,3 +28,6 @@ Andrew, anluanlu123@163.com
 ## License
 
 TLKeyboardUtil-Swift is available under the MIT license. See the LICENSE file for more info.
+=======
+键盘弹出类库
+>>>>>>> f2abe36cfdbc7fabae54b4faff1f8a6dd7b31118
