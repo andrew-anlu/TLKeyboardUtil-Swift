@@ -78,21 +78,76 @@ class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         
         let doneBtn:UIBarButtonItem=UIBarButtonItem(title: "完成", style: .Plain, target: self, action: Selector("finishAction:"));
         
+        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: self, action: nil)
+
         
-        let spaceItem:UIBarButtonItem=UIBarButtonItem(title:nil, style: .Plain, target: self, action: nil);
-        
-        toolbar.items=[nextBarItem!,prevBarItem!,spaceItem,doneBtn];
+        toolbar.items=[nextBarItem!,prevBarItem!,flexBarButton,doneBtn];
         return toolbar;
         
     }
     
     
+    //MARK: - 判断是否 '上一个',‘下一个’ 按钮是否可用
+    /**
+    *  判断是否 '上一个',‘下一个’ 按钮是否可用
+    *
+    *  @param currentInput
+    */
+    func judgeToolbarItemEnabled(UIView currentView:UIView){
+        let subViewsArray:NSMutableArray?=objc_getAssociatedObject(rootScrollView, &keyInputViewSubViewArray) as? NSMutableArray;
+        
+        var index=1000;
+        var i=0;
+        for subView in subViewsArray!{
+            if(currentView==subView as! UIView){
+                index=i;
+                break;
+            }
+            i++;
+        }
+        if(index==0){
+          //上一项 按钮不可用
+            prevBarItem?.enabled=false;
+            nextBarItem?.enabled=true;
+        }else if(index==(subViewsArray?.count)!-1){
+            nextBarItem?.enabled=false;
+            prevBarItem?.enabled=true;
+        }else{
+            prevBarItem?.enabled=true;
+            nextBarItem?.enabled=true;
+        }
+    }
+
     
     /**
      上一个
      */
     func prevAction(sender:AnyObject){
      print("上一个")
+        let currentView:UIView=getFirstResponder()!;
+        
+        let subviewsArray:NSMutableArray?=objc_getAssociatedObject(rootScrollView, &keyInputViewSubViewArray) as? NSMutableArray;
+        var prevView:UIView?;
+        var index:Int=1000;
+       
+        var i=0;
+        for sub in subviewsArray!{
+            if(sub as! UIView==currentView){
+                index=i;
+                break;
+            }
+            i++;
+        }
+        
+        if(index==1000){
+            
+        }else if(index-1>=0){
+            prevView=subviewsArray![index-1] as? UIView;
+            prevView?.becomeFirstResponder();
+            nextBarItem!.enabled=true;
+        }else{
+            prevBarItem!.enabled=false;
+        }
     }
     /**
      下一个
@@ -101,6 +156,30 @@ class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
      */
     func nextAction(sender:AnyObject){
      print("下一个")
+        let currentView:UIView=getFirstResponder()!;
+        
+        let subviewsArray:NSMutableArray?=objc_getAssociatedObject(rootScrollView, &keyInputViewSubViewArray) as? NSMutableArray;
+        var nextView:UIView?;
+        var index:Int=1000;
+        
+        var i=0;
+        for sub in subviewsArray!{
+            if(sub as! UIView==currentView){
+                index=i;
+                break;
+            }
+            i++;
+        }
+        
+        if(index==1000){
+            
+        }else if(index+1<subviewsArray!.count){
+            nextView=subviewsArray![index+1] as? UIView;
+            nextView?.becomeFirstResponder();
+            prevBarItem!.enabled=true;
+        }else{
+            nextBarItem!.enabled=false;
+        }
     }
     
     func finishAction(sender:AnyObject){
@@ -116,7 +195,8 @@ class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
     // MARK: - 键盘弹出
     func keyboardWillShow(noti:NSNotification){
         let currentControl:UIView?=getFirstResponder();
-//        
+        //判断工具条上的按钮是否可用
+        judgeToolbarItemEnabled(UIView: currentControl!);
         let rect:CGRect=(noti.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue)!;
         
         UIView.animateWithDuration(0.2, animations: { () -> Void in
@@ -128,6 +208,9 @@ class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
             if(coverHeight>=0){
                coverHeight=fabsf(coverHeight);
                 y = y - coverHeight;
+                
+                //设置scrollView可以滚动
+                self.rootScrollView!.contentSize=CGSizeMake(self.rootScrollView!.frame.size.width,self.rootScrollView!.frame.size.height+CGFloat(coverHeight));
             }else{
                 coverHeight=fabsf(coverHeight);
                 y += coverHeight;
@@ -187,7 +270,7 @@ class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         let topY:Float=74.0;
         let bottomY:Float=Float(SCREEN_HEIGHT) - keyboardHeight - 80;
         if(Float(windowPoint.y) > bottomY){
-            result=Float(windowPoint.y)-20 - bottomY;
+            result=Float(windowPoint.y) - bottomY + Float(view.frame.size.height);
         }else if(Float(windowPoint.y) < topY){//如果当前的控件被最上面的view或者导航条遮挡的情况
            //让当前View的Y 向下移动，originY增加
             result=Float(windowPoint.y)-20 - topY;
@@ -279,7 +362,7 @@ class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         }
         
         for sub in inputArray!{
-            if let subView = sub as? UITextField{
+            if let subView = sub as? UITextView{
                 subView.inputAccessoryView=keyboardToolbar;
             }else if let subView = sub as? UITextField{
                 subView.inputAccessoryView=keyboardToolbar;

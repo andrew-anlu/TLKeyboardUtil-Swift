@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor=UIColor.whiteColor()
         // Do any additional setup after loading the view, typically from a nib.
         initView();
         let dd:TLKeyboardUtil=TLKeyboardUtil.sharedInstance;
@@ -21,22 +22,38 @@ class ViewController: UIViewController {
 
     
     func initView(){
-        var rect:CGRect=CGRectMake(20, 40, 200, 30);
-        let field1:UITextField=createField(rect: rect, title: "第一个输入框");
-        self.view.addSubview(field1);
         
-        rect=CGRectMake(20,100, 200, 30);
-        let field2:UITextField=createField(rect:rect, title: "第二个输入框");
-        self.view.addSubview(field2);
+        let btn1:UIButton=UIButton(frame:CGRectMake(30, 50, 200, 40));
+        btn1.setTitle("普通视图测试", forState: .Normal)
+        btn1.setTitleColor(UIColor.redColor(), forState: .Normal)
+        btn1.tag=10;
+        btn1.addTarget(self, action: Selector("navAction:"), forControlEvents: .TouchUpInside);
+        self.view.addSubview(btn1);
+        
+        let btn2:UIButton=UIButton(frame:CGRectMake(30, CGRectGetMaxY(btn1.frame
+            )+20, 200, 40))
+        btn2.titleLabel?.text="ScrollView视图测试";
+        btn2.tag=20;
+        btn2.setTitleColor(UIColor.redColor(), forState: .Normal)
+        btn2.setTitle("ScrollView视图测试", forState: .Normal)
+        btn2 .addTarget(self, action: Selector("navAction:"), forControlEvents: .TouchUpInside);
+        self.view.addSubview(btn2);
         
     }
     
-    func createField(rect rect:CGRect,title:String)->UITextField{
-        let field:UITextField=UITextField(frame: rect);
-        field.borderStyle = .Line;
-        field.placeholder=title;
-        return field;
+    func navAction(sender:UIButton){
+        if(sender.tag==10){
+            var vc:FirstViewController=FirstViewController();
+            self.navigationController?.pushViewController(vc, animated: true);
+        }else{
+            var vc:SecondViewController=SecondViewController();
+            self.navigationController?.pushViewController(vc, animated: true);
+        }
     }
+    
+    
+    
+  
     
 
 }
