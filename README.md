@@ -21,6 +21,25 @@ it, simply add the following line to your Podfile:
 pod "TLKeyboardUtil-Swift"
 ```
 
+## How to use
+
+```
+let dd:TLKeyboardUtil=TLKeyboardUtil.sharedInstance;
+        dd.addKeyboardAutoPopWithView(UIVIew: self.view);
+```
+只需简单地两行代码，就可以给你的项目添加上键盘弹出功能。
+
+## APIS
+
+```
+ /**
+     *  给根视图添加键盘自动弹出功能
+     *
+     *  @param rootView 根视图
+     */
+    func addKeyboardAutoPopWithView(UIVIew view:UIView);
+```
+
 ## Author
 
 Andrew, anluanlu123@163.com
