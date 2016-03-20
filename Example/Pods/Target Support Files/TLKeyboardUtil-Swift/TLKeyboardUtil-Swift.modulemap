@@ -1,0 +1,6 @@
+framework module TLKeyboardUtil_Swift {
+  umbrella header "TLKeyboardUtil-Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

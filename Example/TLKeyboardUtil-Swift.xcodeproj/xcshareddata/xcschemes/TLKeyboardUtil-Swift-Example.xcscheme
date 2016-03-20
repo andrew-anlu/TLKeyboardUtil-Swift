@@ -52,6 +52,16 @@
                ReferencedContainer = "container:TLKeyboardUtil-Swift.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "496B8D591C9E1EAB001E0EA8"
+               BuildableName = "TLKeyboardUtilTests.xctest"
+               BlueprintName = "TLKeyboardUtilTests"
+               ReferencedContainer = "container:TLKeyboardUtil-Swift.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

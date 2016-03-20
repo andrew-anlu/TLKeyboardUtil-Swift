@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		13EF94327350F1525F889D0C /* Pods_TLKeyboardUtil_Swift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7CBBBC5A0552CE584ADF01 /* Pods_TLKeyboardUtil_Swift_Example.framework */; };
+		496B8D091C9CD577001E0EA8 /* TLKeyboardUtil_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B8D081C9CD577001E0EA8 /* TLKeyboardUtil_Swift.framework */; };
+		496B8D661C9E1EAB001E0EA8 /* TLKeyboardUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B8D511C9E1EAB001E0EA8 /* TLKeyboardUtil.framework */; };
+		496B8D681C9E1EAB001E0EA8 /* TLKeyboardUtil.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 496B8D511C9E1EAB001E0EA8 /* TLKeyboardUtil.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		496B8D701C9E1EBD001E0EA8 /* TLKeyboardUtil_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496B8D6F1C9E1EBD001E0EA8 /* TLKeyboardUtil_Swift.framework */; };
+		496B8D731C9E2148001E0EA8 /* TlGlobalConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 496B8D721C9E2148001E0EA8 /* TlGlobalConfig.h */; };
+		496B8D751C9E21A5001E0EA8 /* TLKeyboardUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496B8D741C9E21A5001E0EA8 /* TLKeyboardUtil.swift */; };
+		496B8D7A1C9E25AA001E0EA8 /* ControlUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496B8D791C9E25AA001E0EA8 /* ControlUtils.swift */; };
+		496B8D7C1C9E2FAA001E0EA8 /* TLKeyboardProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496B8D7B1C9E2FAA001E0EA8 /* TLKeyboardProtocal.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -18,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		496B8D641C9E1EAB001E0EA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 496B8D501C9E1EAB001E0EA8;
+			remoteInfo = TLKeyboardUtil;
+		};
 		607FACE61AFB9204008FA782 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
@@ -27,10 +42,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		496B8D671C9E1EAB001E0EA8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				496B8D681C9E1EAB001E0EA8 /* TLKeyboardUtil.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		13A8DC104B881C4920D4780F /* Pods-TLKeyboardUtil-Swift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLKeyboardUtil-Swift_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-TLKeyboardUtil-Swift_Example/Pods-TLKeyboardUtil-Swift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		1C7CBBBC5A0552CE584ADF01 /* Pods_TLKeyboardUtil_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TLKeyboardUtil_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		209BA366E4ECCF53A87FE60E /* Pods-TLKeyboardUtil-Swift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLKeyboardUtil-Swift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TLKeyboardUtil-Swift_Tests/Pods-TLKeyboardUtil-Swift_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		496B8D061C9CD46C001E0EA8 /* TLKeyboardUtil_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TLKeyboardUtil_Swift.framework; path = "Pods/../build/Debug-iphoneos/TLKeyboardUtil_Swift.framework"; sourceTree = "<group>"; };
+		496B8D081C9CD577001E0EA8 /* TLKeyboardUtil_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TLKeyboardUtil_Swift.framework; path = "Pods/../build/Debug-iphoneos/TLKeyboardUtil_Swift.framework"; sourceTree = "<group>"; };
+		496B8D511C9E1EAB001E0EA8 /* TLKeyboardUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TLKeyboardUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		496B8D6F1C9E1EBD001E0EA8 /* TLKeyboardUtil_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TLKeyboardUtil_Swift.framework; path = "Pods/../build/Debug-iphoneos/TLKeyboardUtil_Swift.framework"; sourceTree = "<group>"; };
+		496B8D721C9E2148001E0EA8 /* TlGlobalConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TlGlobalConfig.h; sourceTree = "<group>"; };
+		496B8D741C9E21A5001E0EA8 /* TLKeyboardUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLKeyboardUtil.swift; sourceTree = "<group>"; };
+		496B8D791C9E25AA001E0EA8 /* ControlUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlUtils.swift; sourceTree = "<group>"; };
+		496B8D7B1C9E2FAA001E0EA8 /* TLKeyboardProtocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLKeyboardProtocal.swift; sourceTree = "<group>"; };
 		5C2B32467922AA2C45CE5769 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		5FA5CEB534AB1476FF58FBAD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* TLKeyboardUtil-Swift_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TLKeyboardUtil-Swift_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,10 +87,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		496B8D4D1C9E1EAB001E0EA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496B8D701C9E1EBD001E0EA8 /* TLKeyboardUtil_Swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCD1AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				496B8D661C9E1EAB001E0EA8 /* TLKeyboardUtil.framework in Frameworks */,
+				496B8D091C9CD577001E0EA8 /* TLKeyboardUtil_Swift.framework in Frameworks */,
 				13EF94327350F1525F889D0C /* Pods_TLKeyboardUtil_Swift_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,15 +119,38 @@
 		28AD0F1E436A227D82347AFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				496B8D6F1C9E1EBD001E0EA8 /* TLKeyboardUtil_Swift.framework */,
+				496B8D081C9CD577001E0EA8 /* TLKeyboardUtil_Swift.framework */,
+				496B8D061C9CD46C001E0EA8 /* TLKeyboardUtil_Swift.framework */,
 				1C7CBBBC5A0552CE584ADF01 /* Pods_TLKeyboardUtil_Swift_Example.framework */,
 				A965ED14DB6D14233EE90902 /* Pods_TLKeyboardUtil_Swift_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		496B8D711C9E20D6001E0EA8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				496B8D781C9E258F001E0EA8 /* Utils */,
+				496B8D721C9E2148001E0EA8 /* TlGlobalConfig.h */,
+				496B8D741C9E21A5001E0EA8 /* TLKeyboardUtil.swift */,
+				496B8D7B1C9E2FAA001E0EA8 /* TLKeyboardProtocal.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		496B8D781C9E258F001E0EA8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				496B8D791C9E25AA001E0EA8 /* ControlUtils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				496B8D711C9E20D6001E0EA8 /* Sources */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for TLKeyboardUtil-Swift */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -95,6 +165,7 @@
 			children = (
 				607FACD01AFB9204008FA782 /* TLKeyboardUtil-Swift_Example.app */,
 				607FACE51AFB9204008FA782 /* TLKeyboardUtil-Swift_Tests.xctest */,
+				496B8D511C9E1EAB001E0EA8 /* TLKeyboardUtil.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,7 +232,36 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		496B8D4E1C9E1EAB001E0EA8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496B8D731C9E2148001E0EA8 /* TlGlobalConfig.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		496B8D501C9E1EAB001E0EA8 /* TLKeyboardUtil */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 496B8D6D1C9E1EAB001E0EA8 /* Build configuration list for PBXNativeTarget "TLKeyboardUtil" */;
+			buildPhases = (
+				496B8D4C1C9E1EAB001E0EA8 /* Sources */,
+				496B8D4D1C9E1EAB001E0EA8 /* Frameworks */,
+				496B8D4E1C9E1EAB001E0EA8 /* Headers */,
+				496B8D4F1C9E1EAB001E0EA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TLKeyboardUtil;
+			productName = TLKeyboardUtil;
+			productReference = 496B8D511C9E1EAB001E0EA8 /* TLKeyboardUtil.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		607FACCF1AFB9204008FA782 /* TLKeyboardUtil-Swift_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "TLKeyboardUtil-Swift_Example" */;
@@ -172,10 +272,12 @@
 				607FACCE1AFB9204008FA782 /* Resources */,
 				8062C44E9EB40B6E1502439E /* Embed Pods Frameworks */,
 				393C14CDEA231FCEAED3745C /* Copy Pods Resources */,
+				496B8D671C9E1EAB001E0EA8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				496B8D651C9E1EAB001E0EA8 /* PBXTargetDependency */,
 			);
 			name = "TLKeyboardUtil-Swift_Example";
 			productName = "TLKeyboardUtil-Swift";
@@ -213,6 +315,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
+					496B8D501C9E1EAB001E0EA8 = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
@@ -237,11 +342,19 @@
 			targets = (
 				607FACCF1AFB9204008FA782 /* TLKeyboardUtil-Swift_Example */,
 				607FACE41AFB9204008FA782 /* TLKeyboardUtil-Swift_Tests */,
+				496B8D501C9E1EAB001E0EA8 /* TLKeyboardUtil */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		496B8D4F1C9E1EAB001E0EA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCE1AFB9204008FA782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -355,12 +468,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		496B8D4C1C9E1EAB001E0EA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCC1AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				496B8D751C9E21A5001E0EA8 /* TLKeyboardUtil.swift in Sources */,
+				496B8D7C1C9E2FAA001E0EA8 /* TLKeyboardProtocal.swift in Sources */,
+				496B8D7A1C9E25AA001E0EA8 /* ControlUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +498,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		496B8D651C9E1EAB001E0EA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 496B8D501C9E1EAB001E0EA8 /* TLKeyboardUtil */;
+			targetProxy = 496B8D641C9E1EAB001E0EA8 /* PBXContainerItemProxy */;
+		};
 		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 607FACCF1AFB9204008FA782 /* TLKeyboardUtil-Swift_Example */;
@@ -402,6 +530,57 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		496B8D691C9E1EAB001E0EA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = TLKeyboardUtil/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tl.TLKeyboardUtil;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		496B8D6A1C9E1EAB001E0EA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = TLKeyboardUtil/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tl.TLKeyboardUtil;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		607FACED1AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -489,6 +668,10 @@
 			baseConfigurationReference = D4310D021AFCDFFDAEF625FD /* Pods-TLKeyboardUtil-Swift_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "TLKeyboardUtil-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -502,6 +685,10 @@
 			baseConfigurationReference = 13A8DC104B881C4920D4780F /* Pods-TLKeyboardUtil-Swift_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "TLKeyboardUtil-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -551,6 +738,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		496B8D6D1C9E1EAB001E0EA8 /* Build configuration list for PBXNativeTarget "TLKeyboardUtil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				496B8D691C9E1EAB001E0EA8 /* Debug */,
+				496B8D6A1C9E1EAB001E0EA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "TLKeyboardUtil-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
