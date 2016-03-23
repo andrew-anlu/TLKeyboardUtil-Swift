@@ -12,6 +12,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+## OBjC对应的版本
+[objc版本](https://github.com/andrew-anlu/TLKeyboardUtil)
+
+
 ## Installation
 
 TLKeyboardUtil-Swift is available through [CocoaPods](http://cocoapods.org). To install
@@ -25,9 +29,10 @@ pod "TLKeyboardUtil-Swift"
 
 ```
 let dd:TLKeyboardUtil=TLKeyboardUtil.sharedInstance;
-        dd.addKeyboardAutoPopWithView(UIVIew: self.view);
+dd.addKeyboardAutoPopWithView(UIVIew: self.view);
 ```
 只需简单地两行代码，就可以给你的项目添加上键盘弹出功能。
+
 
 ## APIS
 
@@ -35,10 +40,14 @@ let dd:TLKeyboardUtil=TLKeyboardUtil.sharedInstance;
  /**
      *  给根视图添加键盘自动弹出功能
      *
-     *  @param rootView 根视图
+     *  @param rootView 根视图，
      */
     func addKeyboardAutoPopWithView(UIVIew view:UIView);
 ```
+
+如果想在那个View上添加键盘弹出功能，就可以指定对应的View;
+一般我们会在控制器的根目录上的View上增加
+`addKeyboardAutoPopWithView(根View)`即可。
 
 ## Author
 
