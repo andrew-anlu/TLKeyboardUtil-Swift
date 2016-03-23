@@ -11,12 +11,12 @@
 		02BF9988CC94A01E7CB6049694390020 /* NMBExceptionCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 3583D7D5C6884B5811739712676819ED /* NMBExceptionCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02DF5BD2281BA10105A447F95FCF8CF3 /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD51F90687F1FD2CD6E2CDF0E3F62C27 /* BeLogical.swift */; };
 		0492354DA7EF0C9068F7B4E8F74001B0 /* FailureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14E97EFA39EE5B8E0791218121044BD /* FailureMessage.swift */; };
+		080AC6ADFA331AF2FE0467C1E7AEC796 /* TLKeyboardProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBB273A5A7BFA224671B0533860D117 /* TLKeyboardProtocal.swift */; };
 		0A6E71555F55082003A3DB2B03CA85D2 /* AsyncMatcherWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130A59DDB32BBDCFB4ABB11FA368C7F8 /* AsyncMatcherWrapper.swift */; };
 		0F49254A4C560DD4696936F6080756DC /* Nimble-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F4A7503AAF3BA8144C1103305BE6E6A9 /* Nimble-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1182D9E9697D7267D9D4C08EFD509182 /* NimbleSnapshotsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE77204D4845498864080BE9D314C76 /* NimbleSnapshotsConfiguration.swift */; };
 		163C6E8E5E7CEE1E0BEEB9CA0939DA3A /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AA8837A12B9D3429E4E09410BB4EEC /* UIImage+Diff.m */; };
 		1993FFC9D022FFA8EA2928DBCA747F55 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4A758C04274FC6787056B3EA02B27 /* DSL.swift */; };
-		1B8BFB0F2CE78589240C9556EE194123 /* TLKeyboardUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A52E59AB8A730A8139913102AAB57A /* TLKeyboardUtil.swift */; };
 		1E28F9362956B758C4C981D3C1129C90 /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BD571A5BAA6FE5093A498526F8027C /* BeGreaterThan.swift */; };
 		1F118728B3D74089480152A6B660EA9A /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = C1C47926C9D29EC2518DD71AA52EC385 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		1F9A73FCE8FB5B498DDBE09A673804EF /* Nimble-Snapshots-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E13647534D1220F6C05382BE763A06B6 /* Nimble-Snapshots-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,7 +27,6 @@
 		33264C6A7A3536AD91EF42B3E8CC8220 /* BeGreaterThanOrEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18139039A0FE80ADC6A3985117366A4 /* BeGreaterThanOrEqualTo.swift */; };
 		33514FEE6EA65605EFB6F1801834B692 /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6F28E609BD2D14BFE5E6667DAB247 /* AssertionDispatcher.swift */; };
 		35848D70EAC9237246BDF63457729694 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C234BB580B6219647D3BB20A7B9A69F2 /* FBSnapshotTestCase.m */; };
-		38CF19FA422A7B5444D5E759A9DD4654 /* TLKeyboardUtil-Swift.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5754693C0ACFB6200F63F7178385D8BA /* TLKeyboardUtil-Swift.bundle */; };
 		3A92AEE86034356AF8987F20EE1F82DF /* EndWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E77F579A3DFCEB86931BA459893513A /* EndWith.swift */; };
 		3AEAC447B09E7AABC140654C8529BC94 /* MatcherFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF4295D295CD1D2EF74D905D83835A4 /* MatcherFunc.swift */; };
 		3BD7EFC26C5617C2AC6A2DEC8A8B9ABC /* Pods-TLKeyboardUtil-Swift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB851861E64EFEB9AD6F204D2ACCAEDC /* Pods-TLKeyboardUtil-Swift_Example-dummy.m */; };
@@ -53,7 +52,6 @@
 		75333FD045E0926C88212C53E25CD406 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9823197EA5904A9150FB0AD8B09841E6 /* FBSnapshotTestCase.framework */; };
 		7680F08C43B965EC873D26E6AD854C9F /* BeIdenticalTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011394233A7239143D706983E89EE6E5 /* BeIdenticalTo.swift */; };
 		77128C0365A98E3BAC038A915B38791C /* BeAKindOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B87C10CF9687BF019CF83CB256DBBD /* BeAKindOf.swift */; };
-		785461EE220B12454A9C516578123EA8 /* TLKeyboardUtil-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99089E82D95C536EFE6415693112C8E4 /* TLKeyboardUtil-Swift-dummy.m */; };
 		788E3D9458FE9540469981BE9A0B227C /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD96117C39A7B5100135D5FCBDEBAFE /* UIImage+Compare.m */; };
 		7A6E2730A25A55D8DFA74D3D7CB005EF /* BeAnInstanceOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8E5264D4E4F74FEBD8FEF584E260EB /* BeAnInstanceOf.swift */; };
 		7BEF20E09F0E864478905311672F91AB /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DF5FFAEFCCB6ED3B214EB7D8A09278F /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -65,6 +63,7 @@
 		87165912578E674C9409A621A0FF21FF /* World+DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F4953F6E7D2BA1C72B639CC7D9A5EB9 /* World+DSL.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8D0BF52FF564A170A3D1DE28C27B233E /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA329B2CFA87E526DA6452FDD6BB26BC /* Poll.swift */; };
 		8D549E01DA1D5104335CCEABFF870005 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F567A0F84D52EF356BEDCB9F4C9AE7 /* Foundation.framework */; };
+		90FA93AABE421D463795AA7415332434 /* TLKeyboardUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB11AA39BE26A94D72182285796FA61 /* TLKeyboardUtil.swift */; };
 		9187EEC2982DB82AD8D3A7001AA647D6 /* NMBExceptionCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD2FEBA13C21B99B45C2553743F1295 /* NMBExceptionCapture.m */; };
 		9341B96D63EF6C54A1F906A1BBAEAF46 /* DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D815E4D0509F64977CC911FFE53B202 /* DSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9646787942A85613FE77F45794E9B5CD /* BeginWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6249D63C7453302DA79EBB9E0440A1F9 /* BeginWith.swift */; };
@@ -81,6 +80,7 @@
 		B04BD8CCB757995AD8EFBAAC5731E154 /* Pods-TLKeyboardUtil-Swift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FFECA7FB2B819FBE9639280EB813BFDB /* Pods-TLKeyboardUtil-Swift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0A26F58BA3E6222E50AE5AC883B8EAF /* DSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD3149E7587B1EF2A379EC646B17083 /* DSL.m */; };
 		B41E8E775408ACE233F29CE93388B270 /* Contain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983197F6CC870B4E78D23FCBEEAE9845 /* Contain.swift */; };
+		B7943CA4A71DCC81A4550FEF23AA9F9A /* TLKeyboardUtil-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99089E82D95C536EFE6415693112C8E4 /* TLKeyboardUtil-Swift-dummy.m */; };
 		B905718B2501DDA22F2AE73CB6E76E6B /* BeCloseTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160CBE7729A142944B5FB1512025954D /* BeCloseTo.swift */; };
 		BAB03677AA4F12424494BEAF80671E82 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C61FB5D5A77F0F466C68BEF9983217F /* Example.swift */; };
 		BB4F35062294C1A461DA3CEF6306A1DB /* HaveCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D4AFE9465C639DF4E67D1EF16C7D55 /* HaveCount.swift */; };
@@ -118,7 +118,6 @@
 		F8244422337BCD152CEB1F1B35CF6FF1 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43446494C68555558AD6AE7D61940B4A /* Filter.swift */; };
 		FB1347627E64CA7E98C19DC985E13D95 /* Equal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200A0C67CCC284B4A2453C8A749B2FCE /* Equal.swift */; };
 		FE7E8E5A32958A217D235BA8321FD47D /* QuickConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 442017D54DF74E7636CDB5ADE4404ABF /* QuickConfiguration.m */; };
-		FF3CAD27476FD76AFE7BFE8B909E6700 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68A3D83613F18E165D4282366A5A639 /* ReplaceMe.swift */; };
 		FFC311AC1E19A23E0EB7B1B3A7A5A744 /* RaisesException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929FDFE7C05D7BBF5060D429BF214EF4 /* RaisesException.swift */; };
 /* End PBXBuildFile section */
 
@@ -186,13 +185,6 @@
 			remoteGlobalIDString = B7B7BD15A8CB5F16F8AA27B9095171A4;
 			remoteInfo = Quick;
 		};
-		FC41274FD2615031EEF3E00781CBD40D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0418582DD22BBB2E6724D0F790E2FA71;
-			remoteInfo = "TLKeyboardUtil-Swift-TLKeyboardUtil-Swift";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -201,7 +193,7 @@
 		049E62DBC02E79C4174E7BE9678BA37E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D7D938089484EB492A8626AA8E5C528 /* SuiteHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuiteHooks.swift; path = Quick/Hooks/SuiteHooks.swift; sourceTree = "<group>"; };
 		0D815E4D0509F64977CC911FFE53B202 /* DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DSL.h; path = Nimble/objc/DSL.h; sourceTree = "<group>"; };
-		106049E688F1F2272F7ECE1FEA82D636 /* TLKeyboardUtil_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TLKeyboardUtil_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FB11AA39BE26A94D72182285796FA61 /* TLKeyboardUtil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TLKeyboardUtil.swift; sourceTree = "<group>"; };
 		10AD076B851097DA10B51E31A8E7BE6C /* Functional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Functional.swift; path = Nimble/Utils/Functional.swift; sourceTree = "<group>"; };
 		10B87C10CF9687BF019CF83CB256DBBD /* BeAKindOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAKindOf.swift; path = Nimble/Matchers/BeAKindOf.swift; sourceTree = "<group>"; };
 		11CEBA0F9875766C6578D56EC1878D57 /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Nimble/DSL.swift; sourceTree = "<group>"; };
@@ -243,21 +235,21 @@
 		4DD3149E7587B1EF2A379EC646B17083 /* DSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DSL.m; path = Nimble/objc/DSL.m; sourceTree = "<group>"; };
 		4E57E9A961DA8501663351FDF21E0001 /* DSL+Wait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DSL+Wait.swift"; path = "Nimble/DSL+Wait.swift"; sourceTree = "<group>"; };
 		4E8E5264D4E4F74FEBD8FEF584E260EB /* BeAnInstanceOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAnInstanceOf.swift; path = Nimble/Matchers/BeAnInstanceOf.swift; sourceTree = "<group>"; };
-		4EF14FD5610E2900DCFA7DF312FEAA1F /* Pods_TLKeyboardUtil_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TLKeyboardUtil_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5166BFC1F06A657509C298DE92FCE38A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		51FCB773EF851F33AE3EED1ACA874E78 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5431ED1F1056A665AD734B55F7A5DB52 /* TLKeyboardUtil-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TLKeyboardUtil-Swift-prefix.pch"; sourceTree = "<group>"; };
-		55A52E59AB8A730A8139913102AAB57A /* TLKeyboardUtil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TLKeyboardUtil.swift; sourceTree = "<group>"; };
 		5688E87193364A634D42A2B47FD10F25 /* Pods-TLKeyboardUtil-Swift_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TLKeyboardUtil-Swift_Example-resources.sh"; sourceTree = "<group>"; };
 		56F43F352F225085515E95FD5E84CC90 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
-		5754693C0ACFB6200F63F7178385D8BA /* TLKeyboardUtil-Swift.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TLKeyboardUtil-Swift.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59E8FA7292292532AC62D928269FD37A /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		59EDCDCF5B05FEA9E1D8EED5CBD44284 /* Pods-TLKeyboardUtil-Swift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TLKeyboardUtil-Swift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5AC13ABDCDD4DE19AAD5085D05125936 /* ExampleMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleMetadata.swift; path = Quick/ExampleMetadata.swift; sourceTree = "<group>"; };
 		5AD55F3974939097556240403DEE2DFF /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D0007AF2754743AF9750F0E484A1105 /* Pods_TLKeyboardUtil_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TLKeyboardUtil_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E2C261ADB1DE33CC4D7885C285F9DA4 /* Pods-TLKeyboardUtil-Swift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TLKeyboardUtil-Swift_Tests.modulemap"; sourceTree = "<group>"; };
 		6180E032770F8A54A2E991FB0FAB3227 /* QuickConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickConfiguration.h; path = Quick/Configuration/QuickConfiguration.h; sourceTree = "<group>"; };
 		6249D63C7453302DA79EBB9E0440A1F9 /* BeginWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeginWith.swift; path = Nimble/Matchers/BeginWith.swift; sourceTree = "<group>"; };
 		65A48A077F35356D95916F8A306C8917 /* Nimble-Snapshots.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Nimble-Snapshots.xcconfig"; sourceTree = "<group>"; };
+		69120F943876429E347725511D35EFC6 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AAB4E9C6675956E8581E915D8A5989E /* Callsite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Callsite.swift; path = Quick/Callsite.swift; sourceTree = "<group>"; };
 		6C7D89F5B5A33D2D2AA4969021595167 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DEB112A26C5C33C8B8F619999E196CF /* World.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = World.h; path = Quick/World.h; sourceTree = "<group>"; };
@@ -271,12 +263,14 @@
 		7C0655CB1E249D01539E54ECB54D28FB /* Quick.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Quick.modulemap; sourceTree = "<group>"; };
 		7CE6F28E609BD2D14BFE5E6667DAB247 /* AssertionDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionDispatcher.swift; path = Nimble/Adapters/AssertionDispatcher.swift; sourceTree = "<group>"; };
 		7E25FBEBD12C6C9E625F444CD4907C3E /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
+		8066716277B0E0B6CAC9104241730593 /* TLKeyboardUtil_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TLKeyboardUtil_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		824E7E4508E1A8CC3DDFF89F639AA1A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		87AB1002F8FCC9B47C9A52C011D87250 /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble_Snapshots.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		899697610CD89ABF71B0C316A2B370ED /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		89BE051488D88C8017D80180D70DBBAB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C36DB6F05615EC71278526272A72BAD /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E40D1F8B3B5C3CD5239373ECA6BFBA4 /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble_Snapshots.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F4953F6E7D2BA1C72B639CC7D9A5EB9 /* World+DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "World+DSL.h"; path = "Quick/DSL/World+DSL.h"; sourceTree = "<group>"; };
+		8F75042BF6BA2AD6C3459CA999B2FE9F /* Pods_TLKeyboardUtil_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TLKeyboardUtil_Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		922B62E1B104DD877166B996B4606890 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		929FDFE7C05D7BBF5060D429BF214EF4 /* RaisesException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RaisesException.swift; path = Nimble/Matchers/RaisesException.swift; sourceTree = "<group>"; };
 		9459B2EB8DE67CA919E7280851EE428C /* World.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = World.swift; path = Quick/World.swift; sourceTree = "<group>"; };
@@ -286,11 +280,9 @@
 		99089E82D95C536EFE6415693112C8E4 /* TLKeyboardUtil-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TLKeyboardUtil-Swift-dummy.m"; sourceTree = "<group>"; };
 		9C61FB5D5A77F0F466C68BEF9983217F /* Example.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Example.swift; path = Quick/Example.swift; sourceTree = "<group>"; };
 		9DF5FFAEFCCB6ED3B214EB7D8A09278F /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
-		9E36C67AF8BCA621ECFBE01627B84980 /* Pods_TLKeyboardUtil_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TLKeyboardUtil_Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EEC4AE3D10F56B3279410A932A7BA59 /* QuickSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickSpec.h; path = Quick/QuickSpec.h; sourceTree = "<group>"; };
 		A14E97EFA39EE5B8E0791218121044BD /* FailureMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FailureMessage.swift; path = Nimble/FailureMessage.swift; sourceTree = "<group>"; };
 		AA329B2CFA87E526DA6452FDD6BB26BC /* Poll.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Poll.swift; path = Nimble/Utils/Poll.swift; sourceTree = "<group>"; };
-		AAA01F186FD46239A03205497C60051B /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB4C9E009BF21741AB0A3E52D7E8655 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 		AD66CB1D3671E25A32995E05BDD6C65C /* TLKeyboardUtil-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "TLKeyboardUtil-Swift.modulemap"; sourceTree = "<group>"; };
 		AFE47970A7AC09344E95FFCDD3B7C88C /* ObjCExpectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjCExpectation.swift; path = Nimble/ObjCExpectation.swift; sourceTree = "<group>"; };
@@ -317,9 +309,10 @@
 		CD2764775E2D6E934DD52F0446CA03DF /* BeEmpty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeEmpty.swift; path = Nimble/Matchers/BeEmpty.swift; sourceTree = "<group>"; };
 		CEDC7A7B76C6E4AA91841ED1C78FC177 /* Quick-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-umbrella.h"; sourceTree = "<group>"; };
 		CFA51DB996CB38419B5CA02CB769A8F6 /* AllPass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AllPass.swift; path = Nimble/Matchers/AllPass.swift; sourceTree = "<group>"; };
+		CFBB273A5A7BFA224671B0533860D117 /* TLKeyboardProtocal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TLKeyboardProtocal.swift; sourceTree = "<group>"; };
 		D678E63C357CFBA1B94FB88A80FD2E1D /* NSString+QCKSelectorName.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+QCKSelectorName.m"; path = "Quick/NSString+QCKSelectorName.m"; sourceTree = "<group>"; };
+		D9B3773DF275A9AC4E240FB48D7F053D /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA518914FF93256FE632E0DE280C318A /* Nimble.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Nimble.xcconfig; sourceTree = "<group>"; };
-		DBCB10B8AA26D2E837BE0AFAFFADD2A9 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDDE1B04A94712F4D2883C80EE62D96 /* World+DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "World+DSL.swift"; path = "Quick/DSL/World+DSL.swift"; sourceTree = "<group>"; };
 		DE002C91FBB91E22ACE186DB505955BE /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 		E13647534D1220F6C05382BE763A06B6 /* Nimble-Snapshots-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-Snapshots-umbrella.h"; sourceTree = "<group>"; };
@@ -334,9 +327,7 @@
 		F2C4C7B8998A300FC9BDF7B58C652BF5 /* Pods-TLKeyboardUtil-Swift_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TLKeyboardUtil-Swift_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		F2DC3A1743FA7E24B8A5B220632E949B /* Pods-TLKeyboardUtil-Swift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TLKeyboardUtil-Swift_Tests-dummy.m"; sourceTree = "<group>"; };
 		F3BDE044BF194ED1927B42CA547A09D4 /* Pods-TLKeyboardUtil-Swift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TLKeyboardUtil-Swift_Example-frameworks.sh"; sourceTree = "<group>"; };
-		F46AC22141E4DC6C7916C267BD48C1BE /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4A7503AAF3BA8144C1103305BE6E6A9 /* Nimble-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-umbrella.h"; sourceTree = "<group>"; };
-		F68A3D83613F18E165D4282366A5A639 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		F6AA52B39A5AD52E8313E98B6A7A797F /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Nimble/Expression.swift; sourceTree = "<group>"; };
 		F6CD514C93DDFC8131822455310374C7 /* Nimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Nimble.modulemap; sourceTree = "<group>"; };
 		F8C7B43832CED29D843ABAD9BFBF89CF /* Nimble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nimble.h; path = Nimble/Nimble.h; sourceTree = "<group>"; };
@@ -348,13 +339,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		02972F6A7456A3F92DF7C08C024E2FB4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		53799BFC446EFA757FD1305D22A8B6A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -502,6 +486,20 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
+		392FAD3FE08290A9DD6E0D2DABC25584 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51FCB773EF851F33AE3EED1ACA874E78 /* FBSnapshotTestCase.framework */,
+				D9B3773DF275A9AC4E240FB48D7F053D /* Nimble.framework */,
+				87AB1002F8FCC9B47C9A52C011D87250 /* Nimble_Snapshots.framework */,
+				5D0007AF2754743AF9750F0E484A1105 /* Pods_TLKeyboardUtil_Swift_Example.framework */,
+				8F75042BF6BA2AD6C3459CA999B2FE9F /* Pods_TLKeyboardUtil_Swift_Tests.framework */,
+				69120F943876429E347725511D35EFC6 /* Quick.framework */,
+				8066716277B0E0B6CAC9104241730593 /* TLKeyboardUtil_Swift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		41C04066EE90714CB7F6A26ECF2F8C9C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,6 +566,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7A881FA7D7AF0F9AE9A0B1DC1E62A866 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CFBB273A5A7BFA224671B0533860D117 /* TLKeyboardProtocal.swift */,
+				0FB11AA39BE26A94D72182285796FA61 /* TLKeyboardUtil.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		7D31F17BEDAF397B1F838A093E3BE3CB /* SwiftSupport */ = {
 			isa = PBXGroup;
 			children = (
@@ -583,7 +590,7 @@
 				B7257E018E0F73CB4F6BD1985C95557E /* Development Pods */,
 				AF3FA1139EC69E065B1C1095C25B2636 /* Frameworks */,
 				78F21F1BE7AC4A3F62D1326D33FC8B67 /* Pods */,
-				CE2B87E0FF59C69CDF368AD15A9DA11F /* Products */,
+				392FAD3FE08290A9DD6E0D2DABC25584 /* Products */,
 				6DB6639CF180759D2ADF72B40810D037 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -602,7 +609,7 @@
 		9D7E11D58C5E2F9B20E0B39F6EACF3FA /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				F98311BB417173A5272E78F91E7042C4 /* Classes */,
+				7A881FA7D7AF0F9AE9A0B1DC1E62A866 /* Classes */,
 			);
 			path = Pod;
 			sourceTree = "<group>";
@@ -656,21 +663,6 @@
 				379B3CF731145BFDAF1F2424AF287F95 /* TLKeyboardUtil-Swift */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		CE2B87E0FF59C69CDF368AD15A9DA11F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F46AC22141E4DC6C7916C267BD48C1BE /* FBSnapshotTestCase.framework */,
-				DBCB10B8AA26D2E837BE0AFAFFADD2A9 /* Nimble.framework */,
-				8E40D1F8B3B5C3CD5239373ECA6BFBA4 /* Nimble_Snapshots.framework */,
-				4EF14FD5610E2900DCFA7DF312FEAA1F /* Pods_TLKeyboardUtil_Swift_Example.framework */,
-				9E36C67AF8BCA621ECFBE01627B84980 /* Pods_TLKeyboardUtil_Swift_Tests.framework */,
-				AAA01F186FD46239A03205497C60051B /* Quick.framework */,
-				5754693C0ACFB6200F63F7178385D8BA /* TLKeyboardUtil-Swift.bundle */,
-				106049E688F1F2272F7ECE1FEA82D636 /* TLKeyboardUtil_Swift.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		D3F1D88ECF09A79CD47A6CEE55D67F67 /* FBSnapshotTestCase */ = {
@@ -752,15 +744,6 @@
 			path = Nimble;
 			sourceTree = "<group>";
 		};
-		F98311BB417173A5272E78F91E7042C4 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				F68A3D83613F18E165D4282366A5A639 /* ReplaceMe.swift */,
-				55A52E59AB8A730A8139913102AAB57A /* TLKeyboardUtil.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -838,23 +821,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0418582DD22BBB2E6724D0F790E2FA71 /* TLKeyboardUtil-Swift-TLKeyboardUtil-Swift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BE09DAFAD1F1953F52E62EC5354E3E15 /* Build configuration list for PBXNativeTarget "TLKeyboardUtil-Swift-TLKeyboardUtil-Swift" */;
-			buildPhases = (
-				33560DAAB97A8378F3C2770DEE970BFF /* Sources */,
-				02972F6A7456A3F92DF7C08C024E2FB4 /* Frameworks */,
-				157ED6929CAEEDF4D70BCE5CD6BBE656 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "TLKeyboardUtil-Swift-TLKeyboardUtil-Swift";
-			productName = "TLKeyboardUtil-Swift-TLKeyboardUtil-Swift";
-			productReference = 5754693C0ACFB6200F63F7178385D8BA /* TLKeyboardUtil-Swift.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
 		0E359681996C9E927392436D5FB85B25 /* Nimble-Snapshots */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EE82D502BE978777A3B28509A68C619 /* Build configuration list for PBXNativeTarget "Nimble-Snapshots" */;
@@ -872,7 +838,7 @@
 			);
 			name = "Nimble-Snapshots";
 			productName = "Nimble-Snapshots";
-			productReference = 8E40D1F8B3B5C3CD5239373ECA6BFBA4 /* Nimble_Snapshots.framework */;
+			productReference = 87AB1002F8FCC9B47C9A52C011D87250 /* Nimble_Snapshots.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		0E60E385B2B2091FAB455E46A6D032D5 /* Pods-TLKeyboardUtil-Swift_Example */ = {
@@ -890,7 +856,7 @@
 			);
 			name = "Pods-TLKeyboardUtil-Swift_Example";
 			productName = "Pods-TLKeyboardUtil-Swift_Example";
-			productReference = 4EF14FD5610E2900DCFA7DF312FEAA1F /* Pods_TLKeyboardUtil_Swift_Example.framework */;
+			productReference = 5D0007AF2754743AF9750F0E484A1105 /* Pods_TLKeyboardUtil_Swift_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8B859BF9412AC9740D97C069EA01B631 /* Pods-TLKeyboardUtil-Swift_Tests */ = {
@@ -912,7 +878,7 @@
 			);
 			name = "Pods-TLKeyboardUtil-Swift_Tests";
 			productName = "Pods-TLKeyboardUtil-Swift_Tests";
-			productReference = 9E36C67AF8BCA621ECFBE01627B84980 /* Pods_TLKeyboardUtil_Swift_Tests.framework */;
+			productReference = 8F75042BF6BA2AD6C3459CA999B2FE9F /* Pods_TLKeyboardUtil_Swift_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A5C935B614DD08342117AD0B06959CB9 /* FBSnapshotTestCase */ = {
@@ -929,7 +895,7 @@
 			);
 			name = FBSnapshotTestCase;
 			productName = FBSnapshotTestCase;
-			productReference = F46AC22141E4DC6C7916C267BD48C1BE /* FBSnapshotTestCase.framework */;
+			productReference = 51FCB773EF851F33AE3EED1ACA874E78 /* FBSnapshotTestCase.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B7B7BD15A8CB5F16F8AA27B9095171A4 /* Quick */ = {
@@ -946,26 +912,24 @@
 			);
 			name = Quick;
 			productName = Quick;
-			productReference = AAA01F186FD46239A03205497C60051B /* Quick.framework */;
+			productReference = 69120F943876429E347725511D35EFC6 /* Quick.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BA851DE5B8DA191A3C7E6EBD549DD58D /* TLKeyboardUtil-Swift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6BA24FBEB27D509C78626ECACBF3D31E /* Build configuration list for PBXNativeTarget "TLKeyboardUtil-Swift" */;
 			buildPhases = (
-				876E65C1FAA965A7FC3925EEEB199D60 /* Sources */,
+				278DB3C905CE4E9DD0D826D6713020A8 /* Sources */,
 				B29F0D42661735CB44829B9BA2DF2E0F /* Frameworks */,
-				9F5DBA28B4D0589D5A948D786DF2E44F /* Resources */,
 				EFB92DEE29BAF970CB127A7C7B1B61BF /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2858E7FD245C5D7C80C547260395E868 /* PBXTargetDependency */,
 			);
 			name = "TLKeyboardUtil-Swift";
 			productName = "TLKeyboardUtil-Swift";
-			productReference = 106049E688F1F2272F7ECE1FEA82D636 /* TLKeyboardUtil_Swift.framework */;
+			productReference = 8066716277B0E0B6CAC9104241730593 /* TLKeyboardUtil_Swift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C5DB5104FED3C10F78978AFC810982B9 /* Nimble */ = {
@@ -982,7 +946,7 @@
 			);
 			name = Nimble;
 			productName = Nimble;
-			productReference = DBCB10B8AA26D2E837BE0AFAFFADD2A9 /* Nimble.framework */;
+			productReference = D9B3773DF275A9AC4E240FB48D7F053D /* Nimble.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1002,7 +966,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = CE2B87E0FF59C69CDF368AD15A9DA11F /* Products */;
+			productRefGroup = 392FAD3FE08290A9DD6E0D2DABC25584 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -1013,30 +977,21 @@
 				8B859BF9412AC9740D97C069EA01B631 /* Pods-TLKeyboardUtil-Swift_Tests */,
 				B7B7BD15A8CB5F16F8AA27B9095171A4 /* Quick */,
 				BA851DE5B8DA191A3C7E6EBD549DD58D /* TLKeyboardUtil-Swift */,
-				0418582DD22BBB2E6724D0F790E2FA71 /* TLKeyboardUtil-Swift-TLKeyboardUtil-Swift */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		157ED6929CAEEDF4D70BCE5CD6BBE656 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9F5DBA28B4D0589D5A948D786DF2E44F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				38CF19FA422A7B5444D5E759A9DD4654 /* TLKeyboardUtil-Swift.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
+		278DB3C905CE4E9DD0D826D6713020A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				080AC6ADFA331AF2FE0467C1E7AEC796 /* TLKeyboardProtocal.swift in Sources */,
+				B7943CA4A71DCC81A4550FEF23AA9F9A /* TLKeyboardUtil-Swift-dummy.m in Sources */,
+				90FA93AABE421D463795AA7415332434 /* TLKeyboardUtil.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CC3E7452D970C2994AA3AB9C9EBB620 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1049,13 +1004,6 @@
 				788E3D9458FE9540469981BE9A0B227C /* UIImage+Compare.m in Sources */,
 				163C6E8E5E7CEE1E0BEEB9CA0939DA3A /* UIImage+Diff.m in Sources */,
 				EDD91D0CC316AC322E1607D3749F1C0A /* UIImage+Snapshot.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		33560DAAB97A8378F3C2770DEE970BFF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1075,16 +1023,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7E62B0AB89AD1501815C89A375740CD /* Pods-TLKeyboardUtil-Swift_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		876E65C1FAA965A7FC3925EEEB199D60 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FF3CAD27476FD76AFE7BFE8B909E6700 /* ReplaceMe.swift in Sources */,
-				785461EE220B12454A9C516578123EA8 /* TLKeyboardUtil-Swift-dummy.m in Sources */,
-				1B8BFB0F2CE78589240C9556EE194123 /* TLKeyboardUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1176,12 +1114,6 @@
 			name = Nimble;
 			target = C5DB5104FED3C10F78978AFC810982B9 /* Nimble */;
 			targetProxy = 1C3A12CD4CCA20DD8C3BF80CD48FD903 /* PBXContainerItemProxy */;
-		};
-		2858E7FD245C5D7C80C547260395E868 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "TLKeyboardUtil-Swift-TLKeyboardUtil-Swift";
-			target = 0418582DD22BBB2E6724D0F790E2FA71 /* TLKeyboardUtil-Swift-TLKeyboardUtil-Swift */;
-			targetProxy = FC41274FD2615031EEF3E00781CBD40D /* PBXContainerItemProxy */;
 		};
 		311A30EC8885C4692315AF0475A88ED2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1292,18 +1224,6 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		231F0620A39C212781B4B74AA878C4EE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D0715C8A4E1AE09051449FBC75F9403 /* TLKeyboardUtil-Swift.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = "TLKeyboardUtil-Swift";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -1515,18 +1435,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		710EAC5118F8C20822794A7B09AD9B29 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D0715C8A4E1AE09051449FBC75F9403 /* TLKeyboardUtil-Swift.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = "TLKeyboardUtil-Swift";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -1790,15 +1698,6 @@
 			buildConfigurations = (
 				FEA220644D5990C141E3179C3E567C3B /* Debug */,
 				936DC59DA6C10F2BFF951B4F5A571E25 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BE09DAFAD1F1953F52E62EC5354E3E15 /* Build configuration list for PBXNativeTarget "TLKeyboardUtil-Swift-TLKeyboardUtil-Swift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				710EAC5118F8C20822794A7B09AD9B29 /* Debug */,
-				231F0620A39C212781B4B74AA878C4EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

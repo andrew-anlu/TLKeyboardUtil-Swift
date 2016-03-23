@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import TLKeyboardUtil_Swift
 
 class ViewController: UIViewController {
 
@@ -16,8 +16,14 @@ class ViewController: UIViewController {
         self.view.backgroundColor=UIColor.whiteColor()
         // Do any additional setup after loading the view, typically from a nib.
         initView();
-        let dd:TLKeyboardUtil=TLKeyboardUtil.sharedInstance;
+        
+//        let dd:TLKeyboardUtil=TLKeyboardUtil.sharedInstance;
+//        dd.addKeyboardAutoPopWithView(UIVIew: self.view);
+        
+        var dd:TLKeyboardUtil=TLKeyboardUtil.sharedInstance;
         dd.addKeyboardAutoPopWithView(UIVIew: self.view);
+        
+        
     }
 
     

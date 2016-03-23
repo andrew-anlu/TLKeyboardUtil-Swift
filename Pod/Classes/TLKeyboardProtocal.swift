@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol TLKeyBoardAutoPopProtocol{
+ protocol TLKeyBoardAutoPopProtocol{
     
     /**
      *  给根视图添加键盘自动弹出功能

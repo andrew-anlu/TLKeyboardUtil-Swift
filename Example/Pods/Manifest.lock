@@ -10,7 +10,7 @@ PODS:
     - Nimble
     - Quick
   - Quick (0.8.0)
-  - TLKeyboardUtil-Swift (0.1.0)
+  - TLKeyboardUtil-Swift (0.0.1)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -28,6 +28,6 @@ SPEC CHECKSUMS:
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
   Nimble-Snapshots: ab41dd737dcd33a0b0cb005a30465fef70b7207a
   Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
-  TLKeyboardUtil-Swift: e24057b8643032513ee075747bc929cc6e5e9c15
+  TLKeyboardUtil-Swift: dc1a4f0920b5bd2670dfe45bea6b696537496758
 
 COCOAPODS: 0.39.0
