@@ -195,6 +195,11 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
     // MARK: - 键盘弹出
     func keyboardWillShow(noti:NSNotification){
         let currentControl:UIView?=getFirstResponder();
+        
+        if(currentControl == nil)
+        {
+            return
+        }
         //判断工具条上的按钮是否可用
         judgeToolbarItemEnabled(UIView: currentControl!);
         let rect:CGRect=(noti.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue)!;
@@ -388,7 +393,7 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         
         var array:Array<NSNumber>=inputDict!.allKeys as! Array<NSNumber>
         
-        array=array.sort { (AnyObject obj1, AnyObject obj2) -> Bool in
+        array=array.sort { (obj1, obj2) -> Bool in
             return obj1.integerValue < obj2.integerValue;
         }
         
