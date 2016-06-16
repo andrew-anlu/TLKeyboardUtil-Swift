@@ -123,10 +123,18 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
      上一个
      */
     func prevAction(sender:AnyObject){
-     print("上一个")
-        let currentView:UIView=getFirstResponder()!;
+        let currentView:UIView?=getFirstResponder();
+        
+        if(currentView == nil){
+           return
+        }
         
         let subviewsArray:NSMutableArray?=objc_getAssociatedObject(rootScrollView, &keyInputViewSubViewArray) as? NSMutableArray;
+        
+        if(subviewsArray == nil){
+          return
+        }
+        
         var prevView:UIView?;
         var index:Int=1000;
        
@@ -155,12 +163,19 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
      - parameter sender:
      */
     func nextAction(sender:AnyObject){
-     print("下一个")
-        let currentView:UIView=getFirstResponder()!;
+        let currentView:UIView?=getFirstResponder();
+        
+        if(currentView == nil){
+         return
+        }
         
         let subviewsArray:NSMutableArray?=objc_getAssociatedObject(rootScrollView, &keyInputViewSubViewArray) as? NSMutableArray;
         var nextView:UIView?;
         var index:Int=1000;
+        
+        if(subviewsArray == nil){
+          return
+        }
         
         var i=0;
         for sub in subviewsArray!{
@@ -183,9 +198,12 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
     }
     
     func finishAction(sender:AnyObject){
-        print("done");
         
         let subArray:NSMutableArray?=objc_getAssociatedObject(rootScrollView, &keyInputViewSubViewArray) as? NSMutableArray;
+        
+        if(subArray == nil){
+          return
+        }
         
         for sub in subArray!{
             (sub as! UIView).resignFirstResponder();
@@ -253,11 +271,9 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         _rootScrollView.frame=frame;
         }];
         */
-      print("键盘弹出来了")
     }
     //MARK: 键盘退出
     func keyboardWillHide(){
-        print("键盘退出了");
         
         UIView.animateWithDuration(0.2, animations: { () -> Void in
             
@@ -398,7 +414,6 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         }
         
         let resultArray:NSMutableArray = NSMutableArray();
-        print("循环如下:\(array)")
         
         for key in array{
             let view:UIView=inputDict![key] as! UIView;
@@ -406,7 +421,6 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         }
         //将两个对象进行关联
         objc_setAssociatedObject(rootScrollView, &keyInputViewSubViewArray, resultArray,.OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-        print("排序后的数组为:\(resultArray)");
     
     }
     
@@ -415,7 +429,6 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         let subviewsArray:NSMutableArray?=objc_getAssociatedObject(rootScrollView, &keyInputViewSubViewArray) as? NSMutableArray;
         
         guard subviewsArray?.count>0 else{
-            print("执行guradelse中的代码了")
             return;
         }
         
