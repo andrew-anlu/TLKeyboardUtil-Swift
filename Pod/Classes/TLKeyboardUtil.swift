@@ -289,7 +289,6 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         UIView.animateWithDuration(0.2, animations: { () -> Void in
             
             self.rootScrollView?.frame=CGRectMake(0, 0, self.SCREEN_WIDTH, self.SCREEN_HEIGHT);
-            self.rootScrollView?.contentSize=CGSizeZero;
             }, completion: nil);
     }
     
