@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D72EE0A78D5C9E664F973A9E'
+               BlueprintIdentifier = '069DEC241E6294C9DFE3C094'
                BlueprintName = 'TLKeyboardUtil-Swift'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'TLKeyboardUtil_Swift.framework'>

@@ -61,8 +61,8 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         
         let notification:NSNotificationCenter=NSNotificationCenter.defaultCenter();
         
-        notification.addObserver(self, selector: #selector(TLKeyboardUtil.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil);
-        notification.addObserver(self, selector: #selector(TLKeyboardUtil.keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil);
+        notification.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil);
+        notification.addObserver(self, selector: #selector(keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil);
     }
     
     /**
@@ -337,7 +337,7 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         //设置工具条
         setInputAccessViewWithInputView();
         
-        let tap:UITapGestureRecognizer=UITapGestureRecognizer(target: self, action: Selector("tapBackground"));
+        let tap:UITapGestureRecognizer=UITapGestureRecognizer(target: self, action:#selector(tapBackground));
         rootScrollView?.addGestureRecognizer(tap);
     }
     
