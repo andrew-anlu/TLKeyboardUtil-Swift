@@ -1,5 +1,5 @@
 PODS:
-  - TLKeyboardUtil-Swift (0.0.6)
+  - TLKeyboardUtil-Swift (0.0.7)
 
 DEPENDENCIES:
   - TLKeyboardUtil-Swift (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  TLKeyboardUtil-Swift: 869a4f8728218da6b54b00a8eebe695808f18170
+  TLKeyboardUtil-Swift: 6a9c55e15679180780d592c1ffd5c708598e21d9
 
 COCOAPODS: 0.39.0
