@@ -13,14 +13,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor=UIColor.whiteColor()
+        self.view.backgroundColor=UIColor.white()
         // Do any additional setup after loading the view, typically from a nib.
         initView();
         
 //        let dd:TLKeyboardUtil=TLKeyboardUtil.sharedInstance;
 //        dd.addKeyboardAutoPopWithView(UIVIew: self.view);
         
-        var dd:TLKeyboardUtil=TLKeyboardUtil.sharedInstance;
+        let dd:TLKeyboardUtil=TLKeyboardUtil.sharedInstance
         dd.addKeyboardAutoPopWithView(UIVIew: self.view);
         
         
@@ -29,30 +29,29 @@ class ViewController: UIViewController {
     
     func initView(){
         
-        let btn1:UIButton=UIButton(frame:CGRectMake(30, 50, 200, 40));
-        btn1.setTitle("普通视图测试", forState: .Normal)
-        btn1.setTitleColor(UIColor.redColor(), forState: .Normal)
+        let btn1:UIButton=UIButton(frame:CGRect(x: 30, y: 50, width: 200, height: 40));
+        btn1.setTitle("普通视图测试", for: UIControlState())
+        btn1.setTitleColor(UIColor.red(), for: UIControlState())
         btn1.tag=10;
-        btn1.addTarget(self, action: Selector("navAction:"), forControlEvents: .TouchUpInside);
+        btn1.addTarget(self, action: #selector(ViewController.navAction(_:)), for: .touchUpInside);
         self.view.addSubview(btn1);
         
-        let btn2:UIButton=UIButton(frame:CGRectMake(30, CGRectGetMaxY(btn1.frame
-            )+20, 200, 40))
+        let btn2:UIButton=UIButton(frame:CGRect(x: 30, y: btn1.frame.maxY+20, width: 200, height: 40))
         btn2.titleLabel?.text="ScrollView视图测试";
         btn2.tag=20;
-        btn2.setTitleColor(UIColor.redColor(), forState: .Normal)
-        btn2.setTitle("ScrollView视图测试", forState: .Normal)
-        btn2 .addTarget(self, action: Selector("navAction:"), forControlEvents: .TouchUpInside);
+        btn2.setTitleColor(UIColor.red(), for: UIControlState())
+        btn2.setTitle("ScrollView视图测试", for: UIControlState())
+        btn2 .addTarget(self, action: #selector(ViewController.navAction(_:)), for: .touchUpInside);
         self.view.addSubview(btn2);
         
     }
     
-    func navAction(sender:UIButton){
+    func navAction(_ sender:UIButton){
         if(sender.tag==10){
-            var vc:FirstViewController=FirstViewController();
+            let vc:FirstViewController=FirstViewController();
             self.navigationController?.pushViewController(vc, animated: true);
         }else{
-            var vc:SecondViewController=SecondViewController();
+            let vc:SecondViewController=SecondViewController();
             self.navigationController?.pushViewController(vc, animated: true);
         }
     }
