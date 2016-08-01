@@ -61,8 +61,8 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         
         let notification:NSNotificationCenter=NSNotificationCenter.defaultCenter();
         
-        notification.addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil);
-        notification.addObserver(self, selector: Selector("keyboardWillHide"), name: UIKeyboardWillHideNotification, object: nil);
+        notification.addObserver(self, selector: #selector(TLKeyboardUtil.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil);
+        notification.addObserver(self, selector: #selector(TLKeyboardUtil.keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil);
     }
     
     /**
@@ -72,11 +72,11 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
      */
     func createToolBar(frame rect:CGRect)->UIToolbar{
         let toolbar:UIToolbar=UIToolbar(frame: rect);
-        prevBarItem=UIBarButtonItem(title: "上一个", style:.Plain, target: self, action: Selector("prevAction:"))
+        prevBarItem=UIBarButtonItem(title: "上一个", style:.Plain, target: self, action: #selector(TLKeyboardUtil.prevAction(_:)))
         
-        nextBarItem=UIBarButtonItem(title: "下一个", style: .Plain, target: self, action: Selector("nextAction:"))
+        nextBarItem=UIBarButtonItem(title: "下一个", style: .Plain, target: self, action: #selector(TLKeyboardUtil.nextAction(_:)))
         
-        let doneBtn:UIBarButtonItem=UIBarButtonItem(title: "完成", style: .Plain, target: self, action: Selector("finishAction:"));
+        let doneBtn:UIBarButtonItem=UIBarButtonItem(title: "完成", style: .Plain, target: self, action: #selector(TLKeyboardUtil.finishAction(_:)));
         
         let flexBarButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: self, action: nil)
         
@@ -103,7 +103,7 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
                 index=i;
                 break;
             }
-            i++;
+            i += 1;
         }
         if(index==0){
             //上一项 按钮不可用
@@ -140,11 +140,11 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         
         var i=0;
         for sub in subviewsArray!{
-            if(sub as! UIView==currentView){
+            if(sub as? UIView==currentView){
                 index=i;
                 break;
             }
-            i++;
+            i += 1;
         }
         
         if(index==1000){
@@ -179,11 +179,11 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         
         var i=0;
         for sub in subviewsArray!{
-            if(sub as! UIView==currentView){
+            if(sub as? UIView==currentView){
                 index=i;
                 break;
             }
-            i++;
+            i += 1;
         }
         
         if(index==1000){
