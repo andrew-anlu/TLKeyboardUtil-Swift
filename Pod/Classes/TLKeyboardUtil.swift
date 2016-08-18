@@ -232,7 +232,7 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
             
             
             var coverHeight:Float=self.isCover(view: currentControl!, height: Float(rect.size.height));
-            if(coverHeight>=0){
+            if(coverHeight>0){
                 coverHeight=fabsf(coverHeight);
                 y = y - coverHeight;
                 
