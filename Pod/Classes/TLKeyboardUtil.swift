@@ -29,6 +29,8 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
     private  var keyboardToolbar:UIToolbar?
     weak private var rootScrollView:UIScrollView?
     
+    var isHasNavigationBar:Bool = true
+    
     let SCREEN_WIDTH:CGFloat=UIScreen.mainScreen().bounds.width;
     let SCREEN_HEIGHT:CGFloat=UIScreen.mainScreen().bounds.height
     
@@ -298,11 +300,15 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         let windowPoint:CGPoint=(view.superview?.convertPoint(view.frame.origin, toView: UIApplication.sharedApplication().keyWindow))!;
         var result:Float=0;
         
-        let topY:Float=74.0;
+        
+        let topY:Float=64.0;
         let bottomY:Float=Float(SCREEN_HEIGHT) - keyboardHeight - 80;
         if(Float(windowPoint.y) > bottomY){
             result=Float(windowPoint.y) - 20 - bottomY;
-        }else if(Float(windowPoint.y) < topY){//如果当前的控件被最上面的view或者导航条遮挡的情况
+        }
+            
+      
+        else if(Float(windowPoint.y) < topY){//如果当前的控件被最上面的view或者导航条遮挡的情况
             //让当前View的Y 向下移动，originY增加
             result=Float(windowPoint.y)-20 - topY;
         }
@@ -310,7 +316,10 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
     }
     
     
-    
+//    public func addKeyboardAutoPopWithView(UIVIew view: UIView,isHasNavBar:Bool){
+//       self.addKeyboardAutoPopWithView(UIVIew: view)
+//        self.isHasNavigationBar = isHasNavBar
+//    }
     
     //MARK:-APIS  TLKeyboardProtocol 实现
     public func addKeyboardAutoPopWithView(UIVIew view: UIView) {
@@ -337,8 +346,8 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         //设置工具条
         setInputAccessViewWithInputView();
         
-        let tap:UITapGestureRecognizer=UITapGestureRecognizer(target: self, action:#selector(tapBackground));
-        rootScrollView?.addGestureRecognizer(tap);
+//        let tap:UITapGestureRecognizer=UITapGestureRecognizer(target: self, action:#selector(tapBackground));
+//        rootScrollView?.addGestureRecognizer(tap);
     }
     
     //MARK: - 检查所有子视图和嵌套视图中的 InputField
@@ -367,6 +376,8 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
                 let subOriginY:Float=Float(subView.frame.origin.y);
                 let floatNumber:Float=Float(originY)+subOriginY;
                 let key:NSNumber=NSNumber(float:(subOriginY+floatNumber));
+                
+                
                 //放入字典中
                 subDict!.setObject(subView, forKey: key);
             }

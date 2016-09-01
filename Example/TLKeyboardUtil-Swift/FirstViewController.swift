@@ -18,8 +18,13 @@ class FirstViewController: UIViewController {
 
         initView();
         
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
         let keyboardUtil:TLKeyboardUtil=TLKeyboardUtil.sharedInstance;
-        keyboardUtil.addKeyboardAutoPopWithView(UIVIew: self.view);
+//        keyboardUtil.addKeyboardAutoPopWithView(UIVIew: self.view);
+        
+        keyboardUtil.addKeyboardAutoPopWithView(UIVIew: view, isHasNavBar: false)
+        
     }
 
     
@@ -27,7 +32,7 @@ class FirstViewController: UIViewController {
         
         let width:CGFloat=UIScreen.mainScreen().bounds.width-40;
         
-        var rect:CGRect=CGRectMake(20, 40, width-20*4, 30);
+        var rect:CGRect=CGRectMake(20, 0, width-20*4, 30);
         let field1:UISearchBar=UISearchBar(frame: rect);
         self.view.addSubview(field1);
         
