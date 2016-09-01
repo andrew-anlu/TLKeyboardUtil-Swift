@@ -375,8 +375,14 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
                 
                 let subOriginY:Float=Float(subView.frame.origin.y);
                 let floatNumber:Float=Float(originY)+subOriginY;
-                let key:NSNumber=NSNumber(float:(subOriginY+floatNumber));
+                var key:NSNumber=NSNumber(float:(subOriginY+floatNumber));
                 
+                //如果是用苹果的自动布局技术，它的坐标是在运行后渲染计算的，所以这个时候，坐标都是0,0
+                //手动让其key不同
+                let keys = subDict?.allKeys as! [NSNumber]
+                if keys.contains(key) == true{
+                    key = NSNumber(float: key.floatValue + 10)
+                }
                 
                 //放入字典中
                 subDict!.setObject(subView, forKey: key);
