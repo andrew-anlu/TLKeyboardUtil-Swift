@@ -7,6 +7,30 @@
 //
 
 import UIKit
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 
 
@@ -22,34 +46,30 @@ private var keyAllSubviewsDict: Void?
 private var keyInputViewSubViewArray :Void?;
 
 
-public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
+open class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
     
-    private var prevBarItem:UIBarButtonItem?
-    private var nextBarItem:UIBarButtonItem?
-    private  var keyboardToolbar:UIToolbar?
-    weak private var rootScrollView:UIScrollView?
+
+    
+    fileprivate var prevBarItem:UIBarButtonItem?
+    fileprivate var nextBarItem:UIBarButtonItem?
+    fileprivate  var keyboardToolbar:UIToolbar?
+    weak fileprivate var rootScrollView:UIScrollView?
     
     var isHasNavigationBar:Bool = true
     
-    let SCREEN_WIDTH:CGFloat=UIScreen.mainScreen().bounds.width;
-    let SCREEN_HEIGHT:CGFloat=UIScreen.mainScreen().bounds.height
+    let SCREEN_WIDTH:CGFloat=UIScreen.main.bounds.width;
+    let SCREEN_HEIGHT:CGFloat=UIScreen.main.bounds.height
     
     
     
     
     /// 单例模式
-    public class var sharedInstance: TLKeyboardUtil {
-        struct Static {
-            static var onceToken : dispatch_once_t = 0
-            static var instance : TLKeyboardUtil? = nil
-        }
-        dispatch_once(&Static.onceToken) {
-            Static.instance = TLKeyboardUtil()
-        }
-        return Static.instance!;
-    }
     
-    override init() {
+   public static let sharedInstance = TLKeyboardUtil()
+    
+ 
+    
+   private override init() {
         super.init();
         initialized();
     }
@@ -59,12 +79,12 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
      - returns:
      */
     func initialized(){
-        keyboardToolbar=createToolBar(frame: CGRectMake(0, 0,SCREEN_WIDTH, 40));
+        keyboardToolbar=createToolBar(frame: CGRect(x: 0, y: 0,width: SCREEN_WIDTH, height: 40));
         
-        let notification:NSNotificationCenter=NSNotificationCenter.defaultCenter();
+        let notification:NotificationCenter=NotificationCenter.default;
         
-        notification.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil);
-        notification.addObserver(self, selector: #selector(keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil);
+        notification.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil);
+        notification.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil);
     }
     
     /**
@@ -74,13 +94,13 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
      */
     func createToolBar(frame rect:CGRect)->UIToolbar{
         let toolbar:UIToolbar=UIToolbar(frame: rect);
-        prevBarItem=UIBarButtonItem(title: "上一个", style:.Plain, target: self, action: #selector(TLKeyboardUtil.prevAction(_:)))
+        prevBarItem=UIBarButtonItem(title: "上一个", style:.plain, target: self, action: #selector(TLKeyboardUtil.prevAction(_:)))
         
-        nextBarItem=UIBarButtonItem(title: "下一个", style: .Plain, target: self, action: #selector(TLKeyboardUtil.nextAction(_:)))
+        nextBarItem=UIBarButtonItem(title: "下一个", style: .plain, target: self, action: #selector(TLKeyboardUtil.nextAction(_:)))
         
-        let doneBtn:UIBarButtonItem=UIBarButtonItem(title: "完成", style: .Plain, target: self, action: #selector(TLKeyboardUtil.finishAction(_:)));
+        let doneBtn:UIBarButtonItem=UIBarButtonItem(title: "完成", style: .plain, target: self, action: #selector(TLKeyboardUtil.finishAction(_:)));
         
-        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: self, action: nil)
+        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         
         
         toolbar.items=[nextBarItem!,prevBarItem!,flexBarButton,doneBtn];
@@ -109,14 +129,14 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         }
         if(index==0){
             //上一项 按钮不可用
-            prevBarItem?.enabled=false;
-            nextBarItem?.enabled=true;
+            prevBarItem?.isEnabled=false;
+            nextBarItem?.isEnabled=true;
         }else if(index==(subViewsArray?.count)!-1){
-            nextBarItem?.enabled=false;
-            prevBarItem?.enabled=true;
+            nextBarItem?.isEnabled=false;
+            prevBarItem?.isEnabled=true;
         }else{
-            prevBarItem?.enabled=true;
-            nextBarItem?.enabled=true;
+            prevBarItem?.isEnabled=true;
+            nextBarItem?.isEnabled=true;
         }
     }
     
@@ -124,7 +144,7 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
     /**
      上一个
      */
-    func prevAction(sender:AnyObject){
+    func prevAction(_ sender:AnyObject){
         let currentView:UIView?=getFirstResponder();
         
         if(currentView == nil){
@@ -154,9 +174,9 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         }else if(index-1>=0){
             prevView=subviewsArray![index-1] as? UIView;
             prevView?.becomeFirstResponder();
-            nextBarItem!.enabled=true;
+            nextBarItem!.isEnabled=true;
         }else{
-            prevBarItem!.enabled=false;
+            prevBarItem!.isEnabled=false;
         }
     }
     /**
@@ -164,7 +184,7 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
      
      - parameter sender:
      */
-    func nextAction(sender:AnyObject){
+    func nextAction(_ sender:AnyObject){
         let currentView:UIView?=getFirstResponder();
         
         if(currentView == nil){
@@ -193,13 +213,13 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         }else if(index+1<subviewsArray!.count){
             nextView=subviewsArray![index+1] as? UIView;
             nextView?.becomeFirstResponder();
-            prevBarItem!.enabled=true;
+            prevBarItem!.isEnabled=true;
         }else{
-            nextBarItem!.enabled=false;
+            nextBarItem!.isEnabled=false;
         }
     }
     
-    func finishAction(sender:AnyObject){
+    func finishAction(_ sender:AnyObject){
         
         let subArray:NSMutableArray?=objc_getAssociatedObject(rootScrollView, &keyInputViewSubViewArray) as? NSMutableArray;
         
@@ -217,7 +237,7 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
     }
     
     // MARK: - 键盘弹出
-    func keyboardWillShow(noti:NSNotification){
+    func keyboardWillShow(_ noti:Notification){
         let currentControl:UIView?=getFirstResponder();
         
         if(currentControl == nil)
@@ -226,9 +246,9 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         }
         //判断工具条上的按钮是否可用
         judgeToolbarItemEnabled(UIView: currentControl!);
-        let rect:CGRect=(noti.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue)!;
+        let rect:CGRect=((noti.userInfo![UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue)!;
         
-        UIView.animateWithDuration(0.2, animations: { () -> Void in
+        UIView.animate(withDuration: 0.2, animations: { () -> Void in
             var frame:CGRect=(self.rootScrollView?.frame)!;
             var y:Float=Float(self.rootScrollView!.frame.origin.y);
             
@@ -244,7 +264,7 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
                 if(currentControl is UITextView){
                     contentHeight += 120
                 }
-                self.rootScrollView!.contentSize=CGSizeMake(self.rootScrollView!.frame.size.width,contentHeight);
+                self.rootScrollView!.contentSize=CGSize(width: self.rootScrollView!.frame.size.width,height: contentHeight);
                 
                 
             }else{
@@ -288,16 +308,16 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
     //MARK: 键盘退出
     func keyboardWillHide(){
         
-        UIView.animateWithDuration(0.2, animations: { () -> Void in
+        UIView.animate(withDuration: 0.2, animations: { () -> Void in
             
-            self.rootScrollView?.frame=CGRectMake(0, 0, self.SCREEN_WIDTH, self.SCREEN_HEIGHT);
+            self.rootScrollView?.frame=CGRect(x: 0, y: 0, width: self.SCREEN_WIDTH, height: self.SCREEN_HEIGHT);
             }, completion: nil);
     }
     
     
     //MARK: 如果键盘弹出，是否遮盖当前的控件
-    func isCover(view view:UIView,height keyboardHeight:Float)->Float{
-        let windowPoint:CGPoint=(view.superview?.convertPoint(view.frame.origin, toView: UIApplication.sharedApplication().keyWindow))!;
+    func isCover(view:UIView,height keyboardHeight:Float)->Float{
+        let windowPoint:CGPoint=(view.superview?.convert(view.frame.origin, to: UIApplication.shared.keyWindow))!;
         var result:Float=0;
         
         
@@ -322,7 +342,7 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
 //    }
     
     //MARK:-APIS  TLKeyboardProtocol 实现
-    public func addKeyboardAutoPopWithView(UIVIew view: UIView) {
+    open func addKeyboardAutoPopWithView(UIVIew view: UIView) {
         if let rootview=view as? UIScrollView{
             rootScrollView=rootview;
         }else{
@@ -330,7 +350,7 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
             for sub in view.subviews{
                 scrollView.addSubview(sub);
             }
-            view.insertSubview(scrollView, atIndex: 0);
+            view.insertSubview(scrollView, at: 0);
             rootScrollView=scrollView;
         }
         
@@ -359,7 +379,7 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
      */
     func checkedInputViewInRootView(UIVew view:UIView, y originY:CGFloat){
         for subView  in view.subviews{
-            if(subView.hidden==true){
+            if(subView.isHidden==true){
                 continue;
             }
             
@@ -375,13 +395,13 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
                 
                 let subOriginY:Float=Float(subView.frame.origin.y);
                 let floatNumber:Float=Float(originY)+subOriginY;
-                var key:NSNumber=NSNumber(float:(subOriginY+floatNumber));
+                var key:NSNumber=NSNumber(value: (subOriginY+floatNumber) as Float);
                 
                 //如果是用苹果的自动布局技术，它的坐标是在运行后渲染计算的，所以这个时候，坐标都是0,0
                 //手动让其key不同
                 let keys = subDict?.allKeys as! [NSNumber]
                 if keys.contains(key) == true{
-                    key = NSNumber(float: key.floatValue + 10)
+                    key = NSNumber(value: key.floatValue + 10 as Float)
                 }
                 
                 //放入字典中
@@ -436,15 +456,15 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         
         var array:Array<NSNumber>=inputDict!.allKeys as! Array<NSNumber>
         
-        array=array.sort { (obj1, obj2) -> Bool in
-            return obj1.integerValue < obj2.integerValue;
+        array=array.sorted { (obj1, obj2) -> Bool in
+            return obj1.intValue < obj2.intValue;
         }
         
         let resultArray:NSMutableArray = NSMutableArray();
         
         for key in array{
             let view:UIView=inputDict![key] as! UIView;
-            resultArray.addObject(view);
+            resultArray.add(view);
         }
         //将两个对象进行关联
         objc_setAssociatedObject(rootScrollView, &keyInputViewSubViewArray, resultArray,.OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -460,7 +480,7 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
         }
         
         for sub in subviewsArray!{
-            sub.resignFirstResponder();
+            (sub as AnyObject).resignFirstResponder();
         }
         
     }
@@ -475,7 +495,7 @@ public class TLKeyboardUtil: NSObject,TLKeyBoardAutoPopProtocol {
             
         }
         for sub in subviewsArray!{
-            if(sub.isFirstResponder()){
+            if(((sub as AnyObject).isFirstResponder) == true){
                 return sub as? UIView;
             }
         }
